@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <title>Essenze — Cardápio Digital &amp; Pedidos</title>
+  <meta name="description" content="Cardápio digital Essenze: entradas, pratos principais, sobremesas, bebidas e carta de vinhos com pedidos online." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#topo" class="logo">Essenze</a>
+      <nav class="main-nav">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#cardapio">Reservas</a>
+        <a href="#footer">Sobre nós</a>
+      </nav>
+      <button id="cart-toggle" class="icon-btn cart-btn" aria-label="Abrir meu pedido" type="button">
+        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span id="cart-count" class="cart-badge hidden">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="topo">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="kicker-badge">Essenze · BISTRÔ &amp; ADEGA</span>
+        <h1>O sabor mora<br />nos detalhes</h1>
+        <p class="hero-text">Pratos autorais, ingredientes frescos e uma carta selecionada para transformar uma refeição em memória.</p>
+        <button id="scroll-to-menu" class="btn btn-outline-light" type="button">Conheça o cardápio
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+        </button>
+      </div>
+      <div id="hero-images" class="hero-images"></div>
+    </section>
+
+    <!-- ===== PROVA / SOBRE ===== -->
+    <section class="about-section">
+      <div id="about-image" class="about-image"></div>
+      <div class="about-text">
+        <p class="editorial-kicker">A prova está no</p>
+        <h2>prato <em>perfeito</em></h2>
+        <p class="about-desc">Essenze nasceu para celebrar encontros. Cada receita combina técnica, afeto e ingredientes escolhidos diariamente, do primeiro aperitivo à última taça.</p>
+        <div class="pill-row">
+          <span class="pill">Ingredientes frescos</span>
+          <span class="pill">Feito na hora</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MAIS PEDIDOS ===== -->
+    <section class="bestsellers-section">
+      <div class="section-inner">
+        <div class="section-heading-row">
+          <div>
+            <p class="editorial-kicker">Escolhas da casa</p>
+            <h2 class="section-title">Mais pedidos</h2>
+          </div>
+          <button id="see-full-menu" class="link-btn" type="button">Ver cardápio completo
+            <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+        <div id="bestsellers-grid" class="bestsellers-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== FEITO COM ALMA ===== -->
+    <section class="craft-section">
+      <div class="section-inner">
+        <div class="center-heading">
+          <p class="editorial-kicker light">A magia por trás de cada receita</p>
+          <h2 class="section-title light">Feito com alma</h2>
+        </div>
+        <div id="craft-images" class="craft-grid"></div>
+      </div>
+    </section>
+
+    <!-- ===== MONTE SUA COMANDA ===== -->
+    <section class="cta-section">
+      <div class="cta-text">
+        <p class="editorial-kicker">Pronto para experimentar?</p>
+        <h2>Monte sua<br /><em>comanda</em></h2>
+        <p class="about-desc">Escolha seus favoritos, informe a mesa e envie o pedido diretamente para nossa equipe.</p>
+        <button class="btn btn-primary" id="cta-scroll-to-menu" type="button">Explorar sabores
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+        <div class="feature-row">
+          <span><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16.5 12"/></svg> Feito na hora</span>
+          <span><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></svg> Receitas autorais</span>
+          <span><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg> Adega selecionada</span>
+        </div>
+      </div>
+      <div id="cta-image" class="cta-image">
+        <div class="cta-tag">Venha provar<br /><em>o extraordinário</em></div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER INFO ===== -->
+    <section id="footer" class="footer-info">
+      <div class="footer-inner">
+        <div>
+          <p class="footer-logo">Essenze</p>
+          <p class="footer-small">Gastronomia contemporânea para encontros que merecem ser lembrados.</p>
+        </div>
+        <div>
+          <p class="footer-address"><svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Rua das Flores, 120 · Centro</p>
+          <p class="footer-small">Terça a domingo · 12h às 23h</p>
+        </div>
+        <div class="footer-icons">
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/><path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"/><path d="m2.1 21.8 6.4-6.3"/><path d="m19 5-7 7"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CARDÁPIO COMPLETO ===== -->
+    <section id="cardapio" class="menu-section">
+      <div class="section-inner">
+
+        <div class="menu-toolbar">
+          <div class="search-box">
+            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="search-input" type="text" placeholder="Buscar no cardápio..." />
+            <button id="clear-search" class="clear-search hidden" type="button" aria-label="Limpar busca">
+              <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+          </div>
+          <div id="category-filters" class="category-filters"></div>
+        </div>
+
+        <p id="results-count" class="results-count"></p>
+
+        <div id="menu-grid" class="menu-grid"></div>
+        <p id="empty-state" class="empty-state hidden">Nenhum produto encontrado para essa busca.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== BACKDROP ===== -->
+  <div id="backdrop" class="backdrop hidden"></div>
+
+  <!-- ===== DRAWER "MEU PEDIDO" ===== -->
+  <aside id="cart-drawer" class="cart-drawer hidden" role="dialog" aria-label="Meu Pedido">
+    <div class="drawer-header">
+      <div class="drawer-title-group">
+        <span class="drawer-icon"><svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+        <div>
+          <h2>Meu Pedido</h2>
+          <p id="drawer-subtitle" class="drawer-subtitle">Nenhum item selecionado</p>
+        </div>
+      </div>
+      <button id="close-cart" class="icon-btn" aria-label="Fechar" type="button">
+      <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    </div>
+
+    <div class="drawer-body">
+
+      <div id="empty-cart" class="empty-cart">
+        <div class="empty-cart-icon"><svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+        <h3>Sua comanda está vazia</h3>
+        <p>Explore as delícias do cardápio e clique em "Adicionar ao pedido" para começar.</p>
+      </div>
+
+      <div id="cart-items-wrap" class="hidden">
+        <div class="cart-items-header">
+          <span>PRODUTOS SELECIONADOS</span>
+          <button id="clear-cart" class="text-btn" type="button">Esvaziar comanda</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+
+        <!-- Dados do cliente -->
+        <div class="customer-box">
+          <h4><svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Dados para Atendimento</h4>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="customer-name">Nome do Cliente *</label>
+              <input id="customer-name" type="text" placeholder="Ex: João Silva" />
+            </div>
+            <div class="form-field">
+              <label for="table-number">Número da Mesa *</label>
+              <input id="table-number" type="text" placeholder="Ex: 08" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="order-notes"><svg class="icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Observações do Pedido (opcional)</label>
+            <textarea id="order-notes" rows="2" placeholder="Ex: Sem gelo, ponto da carne ao ponto para mal..."></textarea>
+          </div>
+        </div>
+
+        <!-- 10% do garçom -->
+        <div class="tip-box">
+          <div>
+            <div class="tip-title">
+              <span>Serviço do Garçom (10%)</span>
+              <span class="tip-tag">Opcional</span>
+            </div>
+            <p id="tip-desc" class="tip-desc">Marque se deseja apoiar a equipe de salão</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="tip-toggle" />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <!-- Resumo financeiro -->
+        <div class="summary-box">
+          <div class="summary-line">
+            <span>Subtotal dos produtos</span>
+            <span id="summary-subtotal">R$ 0,00</span>
+          </div>
+          <div class="summary-line">
+            <span id="summary-tip-label">Taxa de serviço (10% não inclusa)</span>
+            <span id="summary-tip">R$ 0,00</span>
+          </div>
+          <div class="summary-total">
+            <span>Valor Total do Pedido</span>
+            <span id="summary-total">R$ 0,00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="drawer-footer" class="drawer-footer hidden">
+      <button id="checkout-btn" class="btn btn-primary btn-block" type="button">FINALIZAR PEDIDO
+        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </button>
+      <p class="footer-note">Seu pedido será enviado instantaneamente para a cozinha e o balcão.</p>
+    </div>
+  </aside>
+
+  <!-- ===== MODAL DE CONFIRMAÇÃO ===== -->
+  <div id="confirm-backdrop" class="backdrop hidden"></div>
+  <div id="confirm-modal" class="confirm-modal hidden" role="dialog" aria-label="Pedido finalizado">
+    <div class="confirm-icon"><svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+    <h2>Pedido Realizado com Sucesso!</h2>
+    <p class="confirm-protocol">Protocolo: <span id="confirm-number"></span></p>
+
+    <div class="confirm-customer">
+      <div>
+        <span>Cliente</span>
+        <strong id="confirm-customer-name"></strong>
+      </div>
+      <div>
+        <span>Mesa</span>
+        <strong id="confirm-table-number"></strong>
+      </div>
+    </div>
+
+    <div class="confirm-items-box">
+      <span class="confirm-items-title">Resumo dos Itens</span>
+      <div id="confirm-items"></div>
+    </div>
+
+    <div class="confirm-totals">
+      <div class="summary-line">
+        <span>Subtotal:</span>
+        <span id="confirm-subtotal"></span>
+      </div>
+      <div class="summary-line">
+        <span id="confirm-tip-label">Taxa do garçom (10%):</span>
+        <span id="confirm-tip"></span>
+      </div>
+      <div class="summary-total">
+        <span>Total do Pedido:</span>
+        <span id="confirm-total"></span>
+      </div>
+    </div>
+
+    <button id="new-order-btn" class="btn btn-primary btn-block" type="button">Fazer Novo Pedido</button>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
